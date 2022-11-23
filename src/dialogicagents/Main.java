@@ -10,9 +10,9 @@ public class Main {
 
     public static void main(String[] args) {
         LARVABoot boot = new LARVABoot();
-        boot.Boot("localhost", 1099);
+//        boot.Boot("localhost", 1099);
         // Otherwise our server always run JADE  ;-)
-//         boot.Boot("isg2.ugr.es", 1099);  // Our server is isg2
+         boot.Boot("isg2.ugr.es", 1099);  // Our server is isg2
         // boot.Boot("150.214.190.126", 1099);  // Should there be problems with DNS
         boot.loadAgent(alias + "-F" + getHexaKey(3), Follower.class);
         boot.loadAgent(alias + "-S" + getHexaKey(3), Starter.class);

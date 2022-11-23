@@ -21,7 +21,7 @@ public class Batch extends Starter {
      * to read only those messages that matches the template
      * 
      * More info on JADE Message Templates
-     * file:///home/lcv/UGR/Docencia/Jade/doc/api/jade/lang/acl/MessageTemplate.html
+     * https://drive.google.com/drive/u/1/folders/1b2qYJka7m2cF8mNRuGNRWwL2h8vjK2BT
      * 
      * @return  The next status
      * 
