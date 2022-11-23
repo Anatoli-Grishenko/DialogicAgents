@@ -1,7 +1,7 @@
 /**
  * @file BasicReceiver.java
  */
-package dialogiclient;
+package dialogicagents;
 
 import agents.BasicPlayer;
 import jade.core.AID;

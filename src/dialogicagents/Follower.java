@@ -1,7 +1,7 @@
 /**
  * @file BasicReceiver.java
  */
-package dialogiclient;
+package dialogicagents;
 
 import agents.BasicPlayer;
 import jade.lang.acl.ACLMessage;
@@ -35,13 +35,12 @@ public class Follower extends BasicPlayer {
     public Status myAnswer() {
         // Proceso el mensaje que se había quedado almacenado
         // en inbox y respondo
-        ACLMessage aux = answerTo(inbox, Dict, true);
+        ACLMessage aux = answerTo(inbox);
         // En caso de que hala fallado la construcción de la respuesta, se procede a salir.
         if (aux != null) {
             aux.setPerformative(ACLMessage.INFORM);
             aux.setReplyWith(aux.getContent());
             aux.setConversationId(Conversation);
-            aux.setProtocol(Protocol);
 //            if (useDeadlines) {
 //                aux.setReplyByDate(getDeadline(secs, 2 * secs));
 //            }
