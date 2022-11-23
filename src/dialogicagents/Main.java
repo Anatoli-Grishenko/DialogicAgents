@@ -17,6 +17,7 @@ public class Main {
         boot.loadAgent(alias + "-F" + getHexaKey(3), Follower.class);
         boot.loadAgent(alias + "-S" + getHexaKey(3), Starter.class);
         boot.loadAgent(alias + "-B" + getHexaKey(3), Batch.class);
+        boot.loadAgent(alias + "-I" + getHexaKey(3), Interleaved.class);
 
         // Closes the container and exits
         boot.WaitToShutDown();
