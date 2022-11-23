@@ -18,6 +18,10 @@ public class Main {
         boot.loadAgent(alias + "-S" + getHexaKey(3), Starter.class);
         boot.loadAgent(alias + "-B" + getHexaKey(3), Batch.class);
         boot.loadAgent(alias + "-I" + getHexaKey(3), Interleaved.class);
+        boot.loadAgent(alias + "-DF" + getHexaKey(3), DialogicFollower.class);
+        boot.loadAgent(alias + "-DS" + getHexaKey(3), DialogicStarter.class);
+        boot.loadAgent(alias + "-DB" + getHexaKey(3), DialogicBatch.class);
+        boot.loadAgent(alias + "-DI" + getHexaKey(3), DialogicOpen.class);
 
         // Closes the container and exits
         boot.WaitToShutDown();
