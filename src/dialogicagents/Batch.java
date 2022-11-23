@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @file Batch.java
  */
 package dialogicagents;
 
@@ -18,6 +16,16 @@ public class Batch extends Starter {
 
     int maxAnswers = 5, nAnswers = 0;
 
+    /**
+     * Inspired in the basic send receive message, it uses a template
+     * to read only those messages that matches the template
+     * 
+     * More info on JADE Message Templates
+     * file:///home/lcv/UGR/Docencia/Jade/doc/api/jade/lang/acl/MessageTemplate.html
+     * 
+     * @return  The next status
+     * 
+     */
     @Override
     public Status myReceive() {
         while (nmessages > 0) {

@@ -1,5 +1,5 @@
 /**
- * @file BasicReceiver.java
+ * @file Starter.java
  */
 package dialogicagents;
 
