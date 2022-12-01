@@ -40,6 +40,10 @@ public class DialogicStarter extends DialogicPlayer {
                 outbox.addReceiver(new AID(s, AID.ISLOCALNAME));
             }
             printXUI();
+            /*
+            getInboundOpen();/// Mensajes que he recibido con una peticion y que esperan mi respuesta
+            getOutboundDue();/// Mensajes que he enviado y que ya han reccibido todas las respuestas
+            */
             answers = blockingDialogue(outbox); ///> outbox is automatically closed when done
             printXUI();
             return Status.SEND;

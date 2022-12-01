@@ -22,8 +22,8 @@ public class DialogicFollower extends DialogicPlayer {
      */
     @Override
     public Status myReceive() {
-        answers = getInboundOpen();
-        if (answers != null) {
+//        answers = getInboundOpen();
+        if (!getInboundOpen().isEmpty()) {
             return Status.ANSWER;
         } else {
             return Status.RECEIVE;
@@ -38,8 +38,8 @@ public class DialogicFollower extends DialogicPlayer {
     @Override
     public Status myAnswer() {
         ACLMessage aux;
-        if (answers != null) {
-            for (ACLMessage m : answers) {
+        if (!getInboundOpen().isEmpty()) {
+            for (ACLMessage m : getInboundOpen()) {
                 aux = answerTo(m);
                 if (aux != null) {
                     aux.setPerformative(ACLMessage.INFORM);
